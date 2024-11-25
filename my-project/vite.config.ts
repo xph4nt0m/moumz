@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: './moumz/my-project',  
+  base: '/moumz/',  
   build: {
     outDir: 'dist',  
   },
