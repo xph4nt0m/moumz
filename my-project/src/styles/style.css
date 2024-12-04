@@ -1,0 +1,97 @@
+@import "../animation.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    cursor: none;
+}
+
+.page {
+    @apply  min-h-screen w-full px-20 py-16 pt-32;
+}
+
+.card {
+    @apply  bg-gray-100 rounded-xl shadow-lg p-8 transition duration-300 ease-in-out;
+    position: relative;
+    transform-style: preserve-3d;
+    border: 1px solid black;
+    box-shadow: 14px 14px 0 -0px #d4cfef, 14px 14px 0 0 black;
+}
+
+.card:hover {
+    transform: translateY(10px) translateX(10px);
+    box-shadow: 4px 4px 0 -4px transparent, 4px 4px 0 0 transparent;
+}
+
+
+.card-float {
+    animation: floating-card 2s infinite;
+}
+
+.card-slide-top {
+    animation: slide-from-top 1s;
+}
+
+
+.card-slide-bottom {
+    animation: slide-from-bottom 1s;
+}
+
+.card-slide-left {
+    animation: slide-from-left 1s;
+}
+
+.card-slide-right {
+    animation: slide-from-right 1s;
+}
+
+.img {
+    background-image: url('https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80');
+    @apply bg-cover bg-center;
+}
+
+.img2 {
+    background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80');
+    @apply bg-cover bg-center;
+}
+
+.img3 {
+    background-image: url('https://images.unsplash.com/photo-1499696010180-025ef6e1a8f9?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80');
+    @apply bg-cover bg-center;
+}
+
+.img3 {
+    background-image: url('');
+    @apply bg-cover bg-center;
+}
+
+
+
+
+.tag {
+    @apply bg-[#3f3080] rounded-lg px-2 py-1 border-2 border-black shadow-md text-white font-semibold;
+}
+
+#cursor {
+    position: fixed;
+    width: 16px;
+    height: 16px;
+    background-color: #af9be5;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 20px #ca9cd7, 0 0 30px #ca9cd7, 0 0 50px #ca9cd7;
+    transition: width 0.3s ease, height 0.3s ease;
+    z-index: 9999;
+}
+
+#cursor:hover {
+    width: 24px;
+    height: 24px;
+}
